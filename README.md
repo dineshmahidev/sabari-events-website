@@ -21,6 +21,27 @@ A state-of-the-art, high-conversion event management platform designed for **Sab
 
 ---
 
+## ✨ Visual Showcase
+
+Experience the ultra-premium aesthetic of Sabari Events through our curated design.
+
+| **Section**                  | **Desktop View**                             |
+| :--------------------------- | :------------------------------------------- |
+| **Hero & Branding**          | ![Sabari Events Hero](ss/image.png)          |
+| **Luxury Services**          | ![Services Section](ss/image%20copy%202.png) |
+| **Cinematic Gallery**        | ![Visual Gallery](ss/image%20copy%203.png)   |
+| **Modern Contact & Inquiry** | ![Inquiry Form](ss/image%20copy.png)         |
+
+### 📱 Responsive Mobile Design
+
+Our platform is engineered to look stunning on every device, ensuring a seamless luxury experience on the go.
+
+<div align="center">
+  <img src="ss/image%20copy%204.png" alt="Mobile View" width="300" />
+</div>
+
+---
+
 ## 🛠️ Technology Stack
 
 | Architecture      | Technology                                                       |
