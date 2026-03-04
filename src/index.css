@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Outfit:wght@100..900&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --color-premium-gold: #c5a059;
+  --color-premium-dark: #0d0d0d;
+  --color-premium-cream: #faf9f6;
+
+  --font-serif: "Alegreya", serif;
+  --font-sans: "Outfit", sans-serif;
+
+  --animate-spin-slow: spin 8s linear infinite;
+  --animate-glow: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { box-shadow: 0 0 10px rgba(197, 160, 89, 0.2); }
+  to { box-shadow: 0 0 30px rgba(197, 160, 89, 0.4); }
+}
+
+:root {
+  --premium-gold: #c5a059;
+  --premium-dark: #0d0d0d;
+  --premium-cream: #faf9f6;
+}
+
+body {
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--premium-cream);
+  color: var(--premium-dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Alegreya", serif;
+  letter-spacing: -0.02em;
+}
+
+@layer components {
+  .btn-premium {
+    @apply px-10 py-4 bg-premium-gold text-white rounded-full font-bold transition-all duration-500 hover:shadow-[0_20px_40px_rgba(197,160,89,0.3)] hover:-translate-y-1 active:scale-95 flex items-center justify-center gap-2 relative overflow-hidden;
+  }
+
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-2xl border border-white/40 rounded-[2.5rem] p-10 shadow-[0_20px_50px_rgba(0,0,0,0.05)] transition-all duration-500 hover:shadow-[0_30px_60px_rgba(0,0,0,0.1)] hover:-translate-y-2;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-premium-gold via-[#e2c58a] to-premium-gold bg-[length:200%_auto] animate-[gradient_5s_ease_infinite];
+  }
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-delay-100 {
+  animation-delay: 100ms;
+}
+.animate-delay-200 {
+  animation-delay: 200ms;
+}
+.animate-delay-300 {
+  animation-delay: 300ms;
+}
+
+/* Animations */
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+
+.animate-accordion-down {
+  animation: accordion-down 0.2s ease-out;
+}
+.animate-accordion-up {
+  animation: accordion-up 0.2s ease-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--premium-gold);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b48e4a;
+}
